@@ -21,5 +21,17 @@
         {
             return x / y;
         }
+        public int? DivideByZero(int x, int y)
+        {
+            try
+            {
+                return x / y;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero.");
+                return null;
+            }
+        }
     }
 }
